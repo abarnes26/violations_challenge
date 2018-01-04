@@ -1,3 +1,5 @@
+require 'csv'
+
 class FileLoader
   attr_reader :file_contents
 

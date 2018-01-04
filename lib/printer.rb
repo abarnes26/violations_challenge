@@ -2,7 +2,7 @@ require_relative 'file_loader'
 
 class Printer
 
-  def initalize
+  def initialize
     @file_loader = FileLoader.new
   end
 
