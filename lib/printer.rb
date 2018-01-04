@@ -3,7 +3,7 @@ require_relative 'file_loader'
 class Printer
 
   def initalize
-    @file_loader = File_loader.new
+    @file_loader = FileLoader.new
   end
 
   def load_command
@@ -17,6 +17,12 @@ class Printer
     queue.each do |criteria|
       puts format % data_formatting(criteria)
     end
+  end
+
+  def data_formatting(criteria)
+    [criteria["violation_id"], criteria["inspection_id"],
+    criteria["violation_category"], criteria["violation_date"],
+    criteria["violation_date_closed"], criteria["violation_type"]]
   end
 
   def sort_queue(attribute)

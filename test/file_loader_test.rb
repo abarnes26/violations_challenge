@@ -1,6 +1,6 @@
-require 'test_helper'
+require_relative 'test_helper'
 
-class Printer < Minitest::Test
+class PrinterTest < Minitest::Test
 
   def test_it_instantiates
     printer = Printer.new
@@ -11,3 +11,4 @@ class Printer < Minitest::Test
   def test_it_can_load_files_by_default
     assert_output "You've just loaded Violations-2012.csv\n" do Printer.new.load_command end
   end
+end
